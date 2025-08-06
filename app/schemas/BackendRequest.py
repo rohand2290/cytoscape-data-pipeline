@@ -10,7 +10,6 @@ class MergingOption(Enum):
 
 
 class BackendRequest(BaseModel):
-    paper: str
     disease: str
     merging: MergingOption = MergingOption.union
 
