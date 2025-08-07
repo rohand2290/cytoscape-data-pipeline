@@ -12,3 +12,14 @@ xvfb-run -a cytoscape
 ```
 to launch the headless version.
 After that, run `devenv shell` and `fastapi dev app/main.py` to launch the REST api. 
+
+## Deployment/Production
+Make sure to have Docker installed.
+Then, run
+```
+docker build -t cytoscape-data-pipeline .
+```
+and then run
+```
+docker run -p 8000:8000 -p 1234:1234 cytoscape-data-pipeline
+```
