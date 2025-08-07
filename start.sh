@@ -1,4 +1,5 @@
 #!/bin/bash
-xvfb-run -a /cytoscape-unix-3.10.1/cytoscape.sh &
+xvfb-run -a Cytoscape &
 sleep 20
-exec fastapi run app/main.py
+python install_string.py
+setsid fastapi run app/main.py
